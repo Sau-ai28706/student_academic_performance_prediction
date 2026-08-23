@@ -34,13 +34,20 @@ The dataset contains student-related academic, lifestyle, and behavioral attribu
 The initial analysis includes:
 
 Dataset structure and data types
+
 Missing-value analysis
+
 Duplicate-value checking
+
 Descriptive statistics
+
 Categorical-variable distributions
+
 Correlation analysis
+
 Feature-wise relationships with exam scores
-Methodology
+
+# Methodology
 
 Data Collection → Data Understanding → Data Cleaning → Exploratory Data Analysis → Feature Selection → Encoding → Train-Test Split → Model Training → Hyperparameter Tuning → Evaluation → Model Selection → Deployment
 
@@ -53,7 +60,9 @@ The dataset is divided into 80% training and 20% testing data.
 Three regression algorithms are currently compared:
 
 Linear Regression
+
 Decision Tree Regression
+
 Random Forest Regression
 
 For Decision Tree and Random Forest models, GridSearchCV with 5-fold cross-validation is used to search through selected hyperparameter combinations.
@@ -62,10 +71,10 @@ For Decision Tree and Random Forest models, GridSearchCV with 5-fold cross-valid
 
 The models are evaluated using two regression metrics:
 
-RMSE (Root Mean Squared Error)
+RMSE (Root Mean Squared Error):
 Measures the magnitude of prediction errors, with larger errors receiving greater weight. Lower RMSE indicates better performance.
 
-R² Score
+R² Score:
 Measures how much of the variation in exam scores is explained by the model. Higher R² indicates better performance.
 
 The models are compared using both metrics rather than relying on a single performance measure.
@@ -87,10 +96,15 @@ A Streamlit application was developed to provide an interactive interface for th
 The user provides:
 
 Study hours per day
+
 Attendance percentage
+
 Mental health rating
+
 Sleep hours
+
 Social media hours
+
 Part-time job status
 
 After clicking Predict Exam Score, the application uses the trained model to estimate the examination score.
@@ -118,16 +132,27 @@ Version Control: GitHub
 Through this project, I gained practical experience in:
 
 Exploratory data analysis
+
 Data cleaning and preprocessing
+
 Feature selection
+
 Categorical encoding
+
 Regression modelling
+
 Train-test splitting
+
 Hyperparameter tuning using GridSearchCV
+
 Cross-validation
+
 Regression model evaluation
+
 Comparing multiple ML algorithms
+
 Saving and loading trained models
+
 Building an ML-powered web application
 
 # Future Improvements
@@ -135,12 +160,19 @@ Building an ML-powered web application
 Potential improvements include:
 
 Testing additional regression algorithms
+
 More systematic feature engineering
+
 Implementing a Scikit-learn preprocessing pipeline
+
 More extensive hyperparameter optimization
+
 Adding additional regression metrics such as MAE
+
 Model interpretability and feature-importance analysis
+
 Testing the model on additional student datasets
+
 Improving the Streamlit interface and input validation
 
 # Development & Acknowledgement
