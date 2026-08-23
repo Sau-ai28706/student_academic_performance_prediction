@@ -151,7 +151,11 @@ The project was independently developed as an academic machine learning project.
 Student-Exam-Score-Prediction
 
 📓 Notebook.ipynb — Complete ML development and analysis
+
 🌐 app.py — Streamlit web application
+
 🤖 best_model.pkl — Trained machine learning model
+
 📦 requirements.txt — Python dependencies
+
 📖 README.md — Project documentation
