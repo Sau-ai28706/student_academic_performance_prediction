@@ -147,14 +147,11 @@ Improving the Streamlit interface and input validation
 
 The project was independently developed as an academic machine learning project. Reference materials and tutorials were used during the learning and development process, while the implementation, analysis, model evaluation, and application development were adapted and developed as part of the project workflow.
 
-## Project Structure
+# Project Structure
+Student-Exam-Score-Prediction
 
-'''text
-student-exam-score-prediction
-│
-├── notebook.ipynb
-├── app.py
-├── best_model.pkl
-├── requirements.txt
-└── README.md
-'''
+📓 Notebook.ipynb — Complete ML development and analysis
+🌐 app.py — Streamlit web application
+🤖 best_model.pkl — Trained machine learning model
+📦 requirements.txt — Python dependencies
+📖 README.md — Project documentation
