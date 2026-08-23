@@ -10,194 +10,196 @@ The motivation of this project is to explore these relationships through data an
 
 # Problem Definition
 
-The objective is to develop a regression-based machine learning model that predicts a student's exam score using selected behavioral and lifestyle features.
+The objective is to develop a **regression-based machine learning model** that predicts a student's exam score using selected behavioral and lifestyle features.
 
-Target variable: exam_score
+**Target variable:** `exam_score`
 
-Selected predictors:
+**Selected predictors:**
 
-Study hours per day
+- Study hours per day
 
-Attendance percentage
+- Attendance percentage
 
-Sleep hours
+- Sleep hours
 
-Social media hours
+- Social media hours
 
-Mental health rating
+- Mental health rating
 
-Part-time job status
+- Part-time job status
 
 The project also compares multiple regression algorithms and uses hyperparameter tuning to identify the better-performing model.
 
 # Dataset
 
-The project uses the Student Habits and Academic Performance dataset.
+The project uses the **Student Habits and Academic Performance** dataset.
 
 The dataset contains student-related academic, lifestyle, and behavioral attributes along with their examination scores.
 
 The initial analysis includes:
 
-Dataset structure and data types
+- Dataset structure and data types
 
-Missing-value analysis
+- Missing-value analysis
 
-Duplicate-value checking
+- Duplicate-value checking
 
-Descriptive statistics
+- Descriptive statistics
 
-Categorical-variable distributions
+- Categorical-variable distributions
 
-Correlation analysis
+- Correlation analysis
 
-Feature-wise relationships with exam scores
+- Feature-wise relationships with exam scores
 
 # Methodology
 
 The overall workflow followed in the project is:
 
-Data Collection → Data Understanding → Data Cleaning → Exploratory Data Analysis → Feature Selection → Encoding → Train-Test Split → Model Training → Hyperparameter Tuning → Evaluation → Model Selection → Deployment
+**Data Collection → Data Understanding → Data Cleaning → Exploratory Data Analysis → Feature Selection → Encoding → Train-Test Split → Model Training → Hyperparameter Tuning → Evaluation → Model Selection → Deployment**
 
 Additional steps include:
 
-Encoding the part_time_job feature using LabelEncoder
+- Encoding the `part_time_job` feature using `LabelEncoder`
 
-Splitting the dataset into 80% training and 20% testing data
+- Splitting the dataset into **80% training and 20% testing data**
 
-Comparing multiple regression models
+- Comparing multiple regression models
 
-Performing hyperparameter tuning using cross-validation
+- Performing hyperparameter tuning using cross-validation
 
-Selecting the best-performing model based on RMSE
+- Selecting the best-performing model based on RMSE
 
 # Machine Learning Models
 
 Three regression algorithms are compared:
 
-Linear Regression
+- **Linear Regression**
 
-Decision Tree Regression
+- **Decision Tree Regression**
 
-Random Forest Regression
+- **Random Forest Regression**
 
-For Decision Tree and Random Forest models, GridSearchCV with 5-fold cross-validation is used to search through selected hyperparameter combinations.
+For Decision Tree and Random Forest models, **GridSearchCV with 5-fold cross-validation** is used to search through selected hyperparameter combinations.
 
 # Model Evaluation
 
 The models are evaluated using two regression metrics:
 
-RMSE (Root Mean Squared Error): Measures the magnitude of prediction errors, with larger errors receiving greater weight. Lower RMSE indicates better performance.
-R² Score: Measures how much of the variation in exam scores is explained by the model. Higher R² indicates better performance.
+- **RMSE (Root Mean Squared Error):** Measures the magnitude of prediction errors, with larger errors receiving greater weight. Lower RMSE indicates better performance.
+
+- **R² Score:** Measures how much of the variation in exam scores is explained by the model. Higher R² indicates better performance.
 
 The models are compared using both metrics rather than relying on a single performance measure.
 
 # Model Selection
 
-The model with the lowest RMSE is selected as the best-performing model.
+The model with the **lowest RMSE** is selected as the best-performing model.
 
 The selected model is then retrained on the complete feature-target dataset and saved as:
 
-best_model.pkl
+`best_model.pkl`
 
 The saved model is subsequently used by the Streamlit application for prediction.
 
 # Web Application
 
-A Streamlit application was developed to provide an interactive interface for the trained machine learning model.
+A **Streamlit** application was developed to provide an interactive interface for the trained machine learning model.
 
 The user provides:
 
-Study hours per day
+- Study hours per day
 
-Attendance percentage
+- Attendance percentage
 
-Mental health rating
+- Mental health rating
 
-Sleep hours
+- Sleep hours
 
-Social media hours
+- Social media hours
 
-Part-time job status
+- Part-time job status
 
-After clicking Predict Exam Score, the application uses the trained model to estimate the student's examination score.
+After clicking **Predict Exam Score**, the application uses the trained model to estimate the student's examination score.
 
 # Technology Stack
 
-Programming: Python
+- **Programming:** Python
 
-Data Analysis: Pandas, NumPy
+- **Data Analysis:** Pandas, NumPy
 
-Data Visualization: Matplotlib, Seaborn
+- **Data Visualization:** Matplotlib, Seaborn
 
-Machine Learning: Scikit-learn
+- **Machine Learning:** Scikit-learn
 
-Model Persistence: Joblib
+- **Model Persistence:** Joblib
 
-Web Application: Streamlit
+- **Web Application:** Streamlit
 
-Development Environment: Google Colab
+- **Development Environment:** Google Colab
 
-Version Control: GitHub
+- **Version Control:** GitHub
 
 # Learning Outcomes
 
 Through this project, I gained practical experience in:
 
-Exploratory data analysis
+- Exploratory data analysis
 
-Data cleaning and preprocessing
+- Data cleaning and preprocessing
 
-Feature selection
+- Feature selection
 
-Categorical encoding
+- Categorical encoding
 
-Regression modelling
+- Regression modelling
 
-Train-test splitting
+- Train-test splitting
 
-Hyperparameter tuning using GridSearchCV
+- Hyperparameter tuning using GridSearchCV
 
-Cross-validation
+- Cross-validation
 
-Regression model evaluation
+- Regression model evaluation
 
-Comparing multiple machine learning algorithms
+- Comparing multiple machine learning algorithms
 
-Saving and loading trained models
+- Saving and loading trained models
 
-Building an ML-powered web application
+- Building an ML-powered web application
 
 # Future Improvements
 
 Potential improvements include:
 
-Testing additional regression algorithms
+- Testing additional regression algorithms
 
-More systematic feature engineering
+- More systematic feature engineering
 
-Implementing a Scikit-learn preprocessing pipeline
+- Implementing a Scikit-learn preprocessing pipeline
 
-More extensive hyperparameter optimization
+- More extensive hyperparameter optimization
 
-Adding additional regression metrics such as MAE
+- Adding additional regression metrics such as MAE
 
-Model interpretability and feature-importance analysis
+- Model interpretability and feature-importance analysis
 
-Testing the model on additional student datasets
+- Testing the model on additional student datasets
 
-Improving the Streamlit interface and input validation
+- Improving the Streamlit interface and input validation
 
 # Development & Acknowledgement
 
 The project was independently developed as an academic machine learning project. Reference materials and tutorials were used during the learning and development process, while the implementation, analysis, model evaluation, and application development were adapted and developed as part of the project workflow.
 
 # Project Structure
-📓 notebook.ipynb — Complete machine learning development and analysis
 
-🌐 app.py — Streamlit web application
+- 📓 **`Notebook.ipynb`** — Complete machine learning development and analysis
 
-🤖 best_model.pkl — Trained machine learning model
+- 🌐 **`app.py`** — Streamlit web application
 
-📦 requirements.txt — Python dependencies
+- 🤖 **`best_model.pkl`** — Trained machine learning model
 
-📖 README.md — Project documentation
+- 📦 **`requirements.txt`** — Python dependencies
+
+- 📖 **`README.md`** — Project documentation
