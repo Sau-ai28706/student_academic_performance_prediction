@@ -17,10 +17,15 @@ Target variable: exam_score
 Selected predictors:
 
 Study hours per day
+
 Attendance percentage
+
 Sleep hours
+
 Social media hours
+
 Mental health rating
+
 Part-time job status
 
 The project also compares multiple regression algorithms and uses hyperparameter tuning to identify the better-performing model.
@@ -49,15 +54,25 @@ Feature-wise relationships with exam scores
 
 # Methodology
 
+The overall workflow followed in the project is:
+
 Data Collection → Data Understanding → Data Cleaning → Exploratory Data Analysis → Feature Selection → Encoding → Train-Test Split → Model Training → Hyperparameter Tuning → Evaluation → Model Selection → Deployment
 
-For categorical data, LabelEncoder is used for the selected part_time_job feature.
+Additional steps include:
 
-The dataset is divided into 80% training and 20% testing data.
+Encoding the part_time_job feature using LabelEncoder
+
+Splitting the dataset into 80% training and 20% testing data
+
+Comparing multiple regression models
+
+Performing hyperparameter tuning using cross-validation
+
+Selecting the best-performing model based on RMSE
 
 # Machine Learning Models
 
-Three regression algorithms are currently compared:
+Three regression algorithms are compared:
 
 Linear Regression
 
@@ -71,11 +86,8 @@ For Decision Tree and Random Forest models, GridSearchCV with 5-fold cross-valid
 
 The models are evaluated using two regression metrics:
 
-RMSE (Root Mean Squared Error):
-Measures the magnitude of prediction errors, with larger errors receiving greater weight. Lower RMSE indicates better performance.
-
-R² Score:
-Measures how much of the variation in exam scores is explained by the model. Higher R² indicates better performance.
+RMSE (Root Mean Squared Error): Measures the magnitude of prediction errors, with larger errors receiving greater weight. Lower RMSE indicates better performance.
+R² Score: Measures how much of the variation in exam scores is explained by the model. Higher R² indicates better performance.
 
 The models are compared using both metrics rather than relying on a single performance measure.
 
@@ -83,15 +95,15 @@ The models are compared using both metrics rather than relying on a single perfo
 
 The model with the lowest RMSE is selected as the best-performing model.
 
-The selected model is then retrained on the complete available feature-target dataset and saved as:
+The selected model is then retrained on the complete feature-target dataset and saved as:
 
 best_model.pkl
 
-The saved model is subsequently used by the Streamlit application.
+The saved model is subsequently used by the Streamlit application for prediction.
 
 # Web Application
 
-A Streamlit application was developed to provide an interactive interface for the trained model.
+A Streamlit application was developed to provide an interactive interface for the trained machine learning model.
 
 The user provides:
 
@@ -107,7 +119,7 @@ Social media hours
 
 Part-time job status
 
-After clicking Predict Exam Score, the application uses the trained model to estimate the examination score.
+After clicking Predict Exam Score, the application uses the trained model to estimate the student's examination score.
 
 # Technology Stack
 
@@ -149,7 +161,7 @@ Cross-validation
 
 Regression model evaluation
 
-Comparing multiple ML algorithms
+Comparing multiple machine learning algorithms
 
 Saving and loading trained models
 
@@ -180,9 +192,7 @@ Improving the Streamlit interface and input validation
 The project was independently developed as an academic machine learning project. Reference materials and tutorials were used during the learning and development process, while the implementation, analysis, model evaluation, and application development were adapted and developed as part of the project workflow.
 
 # Project Structure
-Student-Exam-Score-Prediction
-
-📓 Notebook.ipynb — Complete ML development and analysis
+📓 notebook.ipynb — Complete machine learning development and analysis
 
 🌐 app.py — Streamlit web application
 
