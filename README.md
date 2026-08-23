@@ -190,7 +190,7 @@ Potential improvements include:
 
 # Development & Acknowledgement
 
-The project was independently developed as an academic machine learning project. Reference materials and tutorials were used during the learning and development process, while the implementation, analysis, model evaluation, and application development were adapted and developed as part of the project workflow.
+This project was developed as an individual machine learning project, covering the complete workflow from data analysis and model development to evaluation and deployment.
 
 # Project Structure
 
